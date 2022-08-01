@@ -32,26 +32,30 @@ ol, ul {
 	list-style: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
 
 :root {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100vh;
     width: 100vw;
     font-size: 40px;
     color: var(--white);
-    --black: #0A0908;
-    --red: #49111C;
-    --white: #F2F4F3;
-    --lightbrown: #A9927D;
-    --green: #5E503F;
+    --black: #1E212D;
+    --cream: #FAF3E0;
+    --mocha: #EABF9F;
+    --brown: #B68973;
 }
 
 body {
     line-height: 1;
     height: 100%;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--cream);
+}
+
+img {
+    height: 40px;
+    width: 40px;
 }
 
 #content {
@@ -61,12 +65,16 @@ body {
 
 #nav {
     display: flex;
-    background-color: var(--black);
-    color: var(--white);
-
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
 }
 
-.logo {
+.branding {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 25px;
     margin-right: auto;
     padding: 30px;
     margin-left: 100px;
@@ -82,3 +90,6 @@ body {
     font-size: .7rem;
 }
 
+.sections > p:hover {
+    border-bottom: 2px solid var(--black);
+}
