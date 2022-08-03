@@ -38,19 +38,16 @@ ol, ul {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     width: 100vw;
-    font-size: 40px;
+    font-size: 36px;
     color: var(--white);
-    --black: #1E212D;
-    --cream: #FAF3E0;
-    --mocha: #EABF9F;
-    --brown: #B68973;
+    --brown: #5E503F;
 }
 
 body {
     line-height: 1;
     height: 100%;
     width: 100%;
-    background-color: var(--cream);
+    background-color: black;
 }
 
 img {
@@ -61,28 +58,25 @@ img {
 #content {
     height: 100%;
     display: grid;
-    grid-template: 1fr 9fr / 1fr;
+    grid-template: 1fr 8fr/ 1fr;
 }
 
 #nav {
     display: flex;
-    background: url(../src/chalkboard.jpeg);
-    background-size: 100% 100%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid var(--brown);
 }
 
 .branding {
-    color: var(--cream);
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 25px;
-    margin-right: auto;
     padding: 30px;
-    margin-left: 100px;
-    font-size: 1.2rem;
+    margin-left: 5%;
 }
 
 .sections {
@@ -90,26 +84,46 @@ img {
     align-items: center;
     gap: 50px;
     padding: 30px;
-    margin-right: 100px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .sections > button {
     font-weight: bold;
-    font-size: .65rem;
+    font-size: .6rem;
     border: 0px;
     background-color: transparent;
-    color: var(--cream);
-    border-bottom: 2px solid var(--cream);
-    height: 35px;
-    width: 85px;
-}
-
-.sections > button:hover {
-    transform: scale(1.05);
-    color: var(--brown);
+    color: white;
     border-bottom: 2px solid var(--brown);
+    height: 35px;
+    width: 78px;
 }
 
-.sections > button:active {
-    transform: scale(1.15);
+button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(1.2);
+}
+
+.buttons {
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+.buttons > button {
+    font-weight: bold;
+    font-size: .4rem;
+    background-color: var(--brown);
+    border: 2px solid var(--brown);
+    border-radius: 15px;
+    color: white;
+    height: 50px;
+    width: 100px; 
 }

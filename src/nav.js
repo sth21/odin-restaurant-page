@@ -1,11 +1,11 @@
 import Icon from './coffee.png';
+import './nav.css';
 
 export default function renderNav() {
     let content = document.querySelector('#content');
     
     let nav = document.createElement('div');
     nav.setAttribute('id', 'nav');
-    content.appendChild(nav);
 
     let branding = document.createElement('div');
     branding.classList.add('branding');
@@ -16,7 +16,7 @@ export default function renderNav() {
 
     let logo = document.createElement('h1');
     logo.classList.add('logo');
-    logo.textContent = 'Java Script';
+    logo.textContent = 'Java Script Coffee';
     branding.appendChild(logo);
 
     nav.appendChild(branding);
@@ -39,11 +39,22 @@ export default function renderNav() {
     aboutBtn.textContent = 'About';
     sections.appendChild(aboutBtn);
 
-    let coffee2 = new Image();
-    coffee2.src = Icon;
-    sections.appendChild(coffee2);
-
     nav.appendChild(sections);
+
+    let buttons = document.createElement('div');
+    buttons.classList.add('buttons');
+
+    let signup = document.createElement('button');
+    signup.classList.add('sign-up');
+    signup.textContent = 'Sign Up';
+    buttons.appendChild(signup);
+
+    let login = document.createElement('button');
+    login.classList.add('login');
+    login.textContent = 'Log In';
+    buttons.appendChild(login);
+
+    nav.appendChild(buttons);
 
     content.appendChild(nav);
 }
