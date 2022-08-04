@@ -31,9 +31,9 @@ footer, header, hgroup, menu, nav, section {
 
 #home {
     color: white;
-    padding: 100px;
     display: grid;
     grid-template: 1fr 1fr / 1fr;
+    padding: 100px;
 }
 
 .home-top, .home-bottom {
