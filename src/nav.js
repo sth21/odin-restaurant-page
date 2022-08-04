@@ -1,5 +1,10 @@
 import Icon from './coffee.png';
+import renderHome from './home';
+import renderMenu from './menu';
+import renderAbout from './about';
 import './nav.css';
+
+let currentPage = 'home';
 
 export default function renderNav() {
     let content = document.querySelector('#content');
@@ -28,16 +33,19 @@ export default function renderNav() {
     homeBtn.classList.add('home');
     homeBtn.textContent = 'Home';
     sections.appendChild(homeBtn);
+    homeBtn.addEventListener('click', toggle);
 
     let menuBtn = document.createElement('button');
     menuBtn.classList.add('menu');
     menuBtn.textContent = 'Menu';
     sections.appendChild(menuBtn);
+    menuBtn.addEventListener('click', toggle);
 
     let aboutBtn = document.createElement('button');
     aboutBtn.classList.add('about');
     aboutBtn.textContent = 'About';
     sections.appendChild(aboutBtn);
+    aboutBtn.addEventListener('click', toggle);
 
     nav.appendChild(sections);
 
@@ -57,4 +65,27 @@ export default function renderNav() {
     nav.appendChild(buttons);
 
     content.appendChild(nav);
+}
+
+function toggle(event) {
+    if (event.target.classList.contains('home') && currentPage === 'home') {
+        return;
+    } else if (event.target.classList.contains('about') && currentPage === 'about') {
+        return;
+    } else if (event.target.classList.contains('menu') && currentPage === 'menu') {
+        return;
+    }
+    let removal = document.querySelector('#content > div:last-child');
+    console.log(removal);
+    removal.remove();
+    if (event.target.classList.contains('home')) {
+        currentPage = 'home';
+        renderHome();
+    } else if (event.target.classList.contains('menu')) {
+        currentPage = 'menu';
+        renderMenu();
+    } else {
+        currentPage = 'about';
+        renderAbout();
+    }
 }

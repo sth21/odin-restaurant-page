@@ -27,16 +27,16 @@
     border-bottom: 2px dotted var(--brown);
 }
 
-p:first-child {
+#menu p:first-child {
     margin-right: auto;
 }
 
-h3 {
+#menu h3 {
     font-weight: bold;
     font-size: 1.25rem;
     border-bottom: 2px solid var(--brown);
 }
 
-p {
+#menu p {
     font-size: .625rem;
 }

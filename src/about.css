@@ -1,0 +1,30 @@
+#about {
+    color: white;
+    display: grid;
+    grid-template: 1fr 2fr 2fr 2fr 2fr 2fr / 1fr;
+    padding: 100px;
+    padding-bottom: 0px;
+    align-items: center;
+}
+
+.header {
+    align-self: start;
+    display: flex;
+    justify-content: center;
+}
+
+.header > h2 {
+    width: 30%;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--brown);
+}
+
+#about p {
+    font-size: .65rem;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed var(--brown);
+}
